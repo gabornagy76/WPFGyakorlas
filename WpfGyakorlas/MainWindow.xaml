@@ -7,13 +7,52 @@
         mc:Ignorable="d"
         Title="MainWindow"
         Height="450"
-        Width="800">
+        Width="800"
+        MinHeight="300"
+        MinWidth="500"
+        MaxHeight="900"
+        MaxWidth="1400">
+    
+    
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
+        <!-- Név felirat 0. sor-->        
+        <TextBlock Grid.Row="0"
+                   Text="Add meg a neved:"
+                   FontSize="18"
+                   Margin="0,0,0,10"/>
+        
+        <!-- A beviteli mező 1. sor-->
+        <TextBox Grid.Row="1"
+                 x:Name="nevTextBox"
+                 Height="35"
+                 FontSize="16"
+                 Padding="5"
+                 Margin="0,0,0,10"/>
+        
+        <!-- Gomb 2. sor-->
+        <Button Grid.Row="2"
+                x:Name="udvozlesButton"
+                Width="150"
+                Height="40"
+                Content="Üdvözlés"
+                FontSize="16"
+                HorizontalAlignment="Left"
+                Click="udvozlesButton_Click"/>
+        
+        <!-- Eredménykiiratás 3. sor-->
+        <TextBlock Grid.Row="3"
+                   x:Name="eredmenyTextBlock"
+                   FontSize="20"
+                   FontWeight="Bold"
+                   TextWrapping="Wrap"
+                   Margin="0,25,0,0"/>
+
     </Grid>
 </Window>
