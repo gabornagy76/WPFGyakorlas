@@ -78,7 +78,25 @@ namespace WpfGyakorlas
             wpfCheckBox.IsChecked = allapot;
             vremekCheckBox.IsChecked= allapot;
         }
-        
+
+
+        private void alCheckBox_Click(object sender, RoutedEventArgs e)
+        {
+            if (wpfCheckBox.IsChecked == true && vremekCheckBox.IsChecked == true)
+            {
+                foCheckBox.IsChecked = true;
+            }
+            else if (wpfCheckBox.IsChecked == false && vremekCheckBox.IsChecked == false)
+            {
+                foCheckBox.IsChecked = false;
+            }
+            else
+            {
+                foCheckBox.IsChecked = null;
+            }
+        }
+
+
 
     }
 }
