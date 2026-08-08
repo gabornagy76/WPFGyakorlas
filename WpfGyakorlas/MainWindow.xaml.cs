@@ -112,6 +112,23 @@ namespace WpfGyakorlas
             uzenet += "\nA jelszót eltároltuk!";
 
 
+            // DatePicker
+            if (szuletesiDatePicker.SelectedDate == null)
+            {
+                eredmenyTextBlock.Text = "Adj meg egy dátumot!";
+
+                szuletesiDatePicker.Focus();
+
+                return;
+            }
+
+            DateTime szuletesiDatum = szuletesiDatePicker.SelectedDate.Value;
+
+            string datum = szuletesiDatum.ToShortDateString();
+
+            uzenet += $"\nSzületési dátumod: {datum}";
+
+
             // Az eredmény kiiratása
             eredmenyTextBlock.Text = uzenet;
         }
