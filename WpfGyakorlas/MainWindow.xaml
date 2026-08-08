@@ -13,46 +13,49 @@
         MaxHeight="900"
         MaxWidth="1400"
         SizeToContent="WidthAndHeight">
-    
-    
-    <Grid Margin="20">
-        <Grid.RowDefinitions>
-            <!-- Név bekérése -->
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
 
-            <!-- Életkor bekérése -->
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            
-            <!-- CheckBox -->
-            <!-- Fő CheckBox -->            
-            <RowDefinition Height="Auto"/>
-            <!-- Al-CheckBox -->
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+    <ScrollViewer VerticalScrollBarVisibility="Auto"
+                  HorizontalScrollBarVisibility="Auto">
 
-            <!-- Stackpanel - RadioButton -->
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
 
-            <!-- ComboBox -->
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <!-- Név bekérése -->
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
 
-            <!-- ListBox -->
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+                <!-- Életkor bekérése -->
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
 
-            <!-- Üdvözlés gomb -->
-            <RowDefinition Height="Auto"/>
-            
-            <!-- Eredmény -->
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+                <!-- CheckBox -->
+                <!-- Fő CheckBox -->
+                <RowDefinition Height="Auto"/>
+                <!-- Al-CheckBox -->
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
 
-        <!-- Gomb -->
-        <Button Grid.Row="13"
+                <!-- Stackpanel - RadioButton -->
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+
+                <!-- ComboBox -->
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+
+                <!-- ListBox -->
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+
+                <!-- Üdvözlés gomb -->
+                <RowDefinition Height="Auto"/>
+
+                <!-- Eredmény -->
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Gomb -->
+            <Button Grid.Row="13"
                 x:Name="udvozlesButton"
                 Width="150"
                 Height="40"
@@ -61,48 +64,48 @@
                 HorizontalAlignment="Left"
                 Click="udvozlesButton_Click"
                 IsDefault="True"/>
-        
-        <!-- Eredménykiiratás -->
-        <TextBlock Grid.Row="14"
+
+            <!-- Eredménykiiratás -->
+            <TextBlock Grid.Row="14"
                    x:Name="eredmenyTextBlock"
                    FontSize="20"
                    FontWeight="Bold"
                    TextWrapping="Wrap"
                    Margin="0,25,0,0"/>
-        
-        
-        <!-- Név felirat 0. sor-->        
-        <Label Grid.Row="0"
+
+
+            <!-- Név felirat 0. sor-->
+            <Label Grid.Row="0"
                Content="Add meg a _neved:"
                FontSize="18"
                Margin="0,0,0,10"
                Target="{Binding ElementName=nevTextBox}"/>
-        
-        <!-- A beviteli mező 1. sor-->
-        <TextBox Grid.Row="1"
+
+            <!-- A beviteli mező 1. sor-->
+            <TextBox Grid.Row="1"
                  x:Name="nevTextBox"
                  Height="35"
                  FontSize="16"
                  Padding="5"
                  Margin="0,0,0,10"/>
 
-        <!-- Életkor felirat 2. sor-->
-        <Label Grid.Row="2"
+            <!-- Életkor felirat 2. sor-->
+            <Label Grid.Row="2"
                Content="Add meg az _életkorod:"
                FontSize="18"
                Margin="0,0,0,10"
                Target="{Binding ElementName=eletkorTextBox}"/>
 
-        <!-- A beviteli mező 3. sor-->
-        <TextBox Grid.Row="3"
+            <!-- A beviteli mező 3. sor-->
+            <TextBox Grid.Row="3"
                  x:Name="eletkorTextBox"
                  Height="35"
                  FontSize="16"
                  Padding="5"
                  Margin="0,0,0,10"/>
 
-        <!-- Fő CheckBox -->
-        <CheckBox Grid.Row="4"
+            <!-- Fő CheckBox -->
+            <CheckBox Grid.Row="4"
                   x:Name="foCheckBox"
                   Content="Összesítő"
                   IsThreeState="True"
@@ -110,10 +113,10 @@
                   Margin="0,0,0,15"
                   VerticalContentAlignment="Center"
                   Click="foCheckBox_Click"/>
-                  
 
-        <!-- Al CheckBox 1 -->
-        <CheckBox Grid.Row="5"
+
+            <!-- Al CheckBox 1 -->
+            <CheckBox Grid.Row="5"
                   x:Name="wpfCheckBox"
                   Content="Szeretem a WPF-et"
                   FontSize="16"
@@ -121,8 +124,8 @@
                   VerticalContentAlignment="Center"
                   Click="alCheckBox_Click"/>
 
-        <!-- Al CheckBox 2 -->
-        <CheckBox Grid.Row="6"
+            <!-- Al CheckBox 2 -->
+            <CheckBox Grid.Row="6"
                   x:Name="vremekCheckBox"
                   Content="Készül a vizsgamunka"
                   FontSize="16"
@@ -130,61 +133,61 @@
                   VerticalContentAlignment="Center"
                   Click="alCheckBox_Click"/>
 
-        <Label Grid.Row="7"
+            <Label Grid.Row="7"
                Content="Nem:"
                FontSize="18"
                Padding="5"
                Margin="0,0,0,5"/>
 
-        <StackPanel Grid.Row="8"
+            <StackPanel Grid.Row="8"
                     Margin="20,0,0,15">
 
-            <RadioButton x:Name="ferfiRadioButton"
+                <RadioButton x:Name="ferfiRadioButton"
                              Content="férfi"
                              IsChecked="True"
                              GroupName="Nem"
                              Margin="0,0,0,3"/>
 
-            <RadioButton x:Name="noRadioButton"
+                <RadioButton x:Name="noRadioButton"
                          Content="nő"
                          GroupName="Nem"
                          Margin="0,0,0,3"/>
 
-        </StackPanel>
+            </StackPanel>
 
-        <Label Grid.Row="9"
+            <Label Grid.Row="9"
                Content="_Osztály"
                Target="{Binding ElementName=osztalyComboBox}"
                FontSize="18"
                Padding="2"
                Margin="0,0,0,6"/>
 
-        <ComboBox Grid.Row="10"
+            <ComboBox Grid.Row="10"
                   x:Name="osztalyComboBox"
                   FontSize="16"
                   Padding="5"
                   Margin="0,0,0,15"
                   SelectedIndex="0">
 
-            <ComboBoxItem Content="9/A"/>
-            <ComboBoxItem Content="9/B"/>
-            <ComboBoxItem Content="9/V"/>
-            <ComboBoxItem Content="10/A"/>
-            <ComboBoxItem Content="10/B"/>
-            <ComboBoxItem Content="10/C"/>
-            <ComboBoxItem Content="11/A"/>
-            <ComboBoxItem Content="11/B"/>
-            <ComboBoxItem Content="11/C"/>
+                <ComboBoxItem Content="9/A"/>
+                <ComboBoxItem Content="9/B"/>
+                <ComboBoxItem Content="9/V"/>
+                <ComboBoxItem Content="10/A"/>
+                <ComboBoxItem Content="10/B"/>
+                <ComboBoxItem Content="10/C"/>
+                <ComboBoxItem Content="11/A"/>
+                <ComboBoxItem Content="11/B"/>
+                <ComboBoxItem Content="11/C"/>
 
-        </ComboBox>
+            </ComboBox>
 
-        <Label Grid.Row="11"
+            <Label Grid.Row="11"
                Content="_Kedvenc tantárgy"
                Target="{Binding ElementName=tantargyListBox}"
                FontSize="18"
                Margin="0,0,0,5"/>
 
-        <ListBox Grid.Row="12"
+            <ListBox Grid.Row="12"
                  x:Name="tantargyListBox"
                  Height="150"
                  FontSize="16"
@@ -192,14 +195,16 @@
                  SelectedIndex="0"
                  Margin="0,0,0,15">
 
-            <ListBoxItem Content="Matematika"/>
-            <ListBoxItem Content="Fizika"/>
-            <ListBoxItem Content="Digitális kultúra"/>
-            <ListBoxItem Content="Történelem"/>
-            <ListBoxItem Content="Magyar"/>
-            <ListBoxItem Content="Testnevelés"/>
-        </ListBox>
+                <ListBoxItem Content="Matematika"/>
+                <ListBoxItem Content="Fizika"/>
+                <ListBoxItem Content="Digitális kultúra"/>
+                <ListBoxItem Content="Történelem"/>
+                <ListBoxItem Content="Magyar"/>
+                <ListBoxItem Content="Testnevelés"/>
+            </ListBox>
 
 
-    </Grid>
+        </Grid>
+
+    </ScrollViewer>
 </Window>
