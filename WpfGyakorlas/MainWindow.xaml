@@ -25,6 +25,9 @@
             <RowDefinition Height="Auto"/>
             
             <!-- CheckBox -->
+            <!-- Fő CheckBox -->            
+            <RowDefinition Height="Auto"/>
+            <!-- Al-CheckBox -->
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
 
@@ -36,7 +39,7 @@
         </Grid.RowDefinitions>
 
         <!-- Gomb -->
-        <Button Grid.Row="6"
+        <Button Grid.Row="7"
                 x:Name="udvozlesButton"
                 Width="150"
                 Height="40"
@@ -47,7 +50,7 @@
                 IsDefault="True"/>
         
         <!-- Eredménykiiratás -->
-        <TextBlock Grid.Row="7"
+        <TextBlock Grid.Row="8"
                    x:Name="eredmenyTextBlock"
                    FontSize="20"
                    FontWeight="Bold"
@@ -85,17 +88,34 @@
                  Padding="5"
                  Margin="0,0,0,10"/>
 
+        <!-- Fő CheckBox -->
         <CheckBox Grid.Row="4"
+                  x:Name="foCheckBox"
+                  Content="Összesítő"
+                  IsThreeState="True"
+                  FontSize="16"
+                  Margin="0,0,0,15"
+                  VerticalContentAlignment="Center"
+                  Click="foCheckBox_Click"/>
+                  
+
+        <!-- Al CheckBox 1 -->
+        <CheckBox Grid.Row="5"
                   x:Name="wpfCheckBox"
                   Content="Szeretem a WPF-et"
                   FontSize="16"
-                  Margin="0,0,0,15"/>
+                  Margin="0,0,0,15"
+                  VerticalContentAlignment="Center"
+                  Click="alCheckBox_Click"/>
 
-        <CheckBox Grid.Row="5"
+        <!-- Al CheckBox 2 -->
+        <CheckBox Grid.Row="6"
                   x:Name="vremekCheckBox"
                   Content="Készül a vizsgamunka"
                   FontSize="16"
-                  Margin="0,0,0,15"/>
+                  Margin="0,0,0,15"
+                  VerticalContentAlignment="Center"
+                  Click="alCheckBox_Click"/>
 
 
     </Grid>

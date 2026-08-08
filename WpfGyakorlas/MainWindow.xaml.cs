@@ -71,5 +71,14 @@ namespace WpfGyakorlas
             eredmenyTextBlock.Text = uzenet;
         }
 
+        private void foCheckBox_Click(object sender, RoutedEventArgs e)
+        {
+            bool allapot = foCheckBox.IsChecked == true;
+
+            wpfCheckBox.IsChecked = allapot;
+            vremekCheckBox.IsChecked= allapot;
+        }
+        
+
     }
 }
