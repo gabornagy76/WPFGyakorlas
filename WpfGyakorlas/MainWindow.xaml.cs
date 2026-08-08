@@ -128,6 +128,11 @@ namespace WpfGyakorlas
 
             uzenet += $"\nSzületési dátumod: {datum}";
 
+            // Slider
+            double tanulsiKedv = kedvSlider.Value;
+
+            uzenet += $"\nTanulási kedved: {tanulsiKedv}%";
+
 
             // Az eredmény kiiratása
             eredmenyTextBlock.Text = uzenet;
