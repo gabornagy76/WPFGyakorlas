@@ -54,6 +54,10 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
 
+                <!-- Slider -->
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+
                 <!-- Üdvözlés gomb -->
                 <RowDefinition Height="Auto"/>
 
@@ -62,7 +66,7 @@
             </Grid.RowDefinitions>
 
             <!-- Gomb -->
-            <Button Grid.Row="17"
+            <Button Grid.Row="19"
                 x:Name="udvozlesButton"
                 Width="150"
                 Height="40"
@@ -73,7 +77,7 @@
                 IsDefault="True"/>
 
             <!-- Eredménykiiratás -->
-            <TextBlock Grid.Row="18"
+            <TextBlock Grid.Row="20"
                    x:Name="eredmenyTextBlock"
                    FontSize="20"
                    FontWeight="Bold"
@@ -140,6 +144,7 @@
                   VerticalContentAlignment="Center"
                   Click="alCheckBox_Click"/>
 
+            <!-- RadioButton -->
             <Label Grid.Row="7"
                Content="Nem:"
                FontSize="18"
@@ -162,6 +167,7 @@
 
             </StackPanel>
 
+            <!-- ComboBox -->
             <Label Grid.Row="9"
                Content="_Osztály"
                Target="{Binding ElementName=osztalyComboBox}"
@@ -188,6 +194,7 @@
 
             </ComboBox>
 
+            <!-- ListBox -->
             <Label Grid.Row="11"
                Content="_Kedvenc tantárgy"
                Target="{Binding ElementName=tantargyListBox}"
@@ -210,7 +217,7 @@
                 <ListBoxItem Content="Testnevelés"/>
             </ListBox>
 
-
+            <!-- PasswordBox -->
             <Label Grid.Row="13"
                    Content="_Jelszó"
                    Target="{Binding ElementName=jelszoPasswordBox}"
@@ -224,6 +231,7 @@
                          Padding="5"
                          Margin="0,0,0,15"/>
 
+            <!-- DatePicker -->
             <Label Grid.Row="15"
                    Content="_Születési dátum"
                    Target="{Binding ElementName=szuletesiDatePicker}"
@@ -237,6 +245,23 @@
                         Margin="0,0,0,15"
                         SelectedDateFormat="Long"/>
 
+            <!-- Slider -->
+            <Label Grid.Row="17"
+                   Content="Tanulási kedv:"
+                   Target="{Binding ElementName=kedvSlider}"
+                   FontSize="18"
+                   Padding="5"
+                   Margin="0,0,0,5"/>
+
+            <Slider Grid.Row="18"
+                    x:Name="kedvSlider"
+                    Minimum="0"
+                    Maximum="100"
+                    Value="50"
+                    Margin="0,0,0,15"
+                    TickFrequency="10"
+                    TickPlacement="BottomRight"
+                    IsSnapToTickEnabled="True"/>
 
         </Grid>
 
