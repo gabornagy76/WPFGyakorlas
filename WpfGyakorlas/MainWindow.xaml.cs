@@ -36,7 +36,18 @@ namespace WpfGyakorlas
                 return;
             }
 
-            eredmenyTextBlock.Text = $"Üdvözöllek a WPF világában {nev}!";
+            int eletkor;
+
+            if (!int.TryParse(eletkorTextBox.Text, out eletkor))
+            {
+                eredmenyTextBlock.Text = "Az életkor csak szám lehet!";
+
+                eletkorTextBox.Focus();
+
+                return;
+            }
+
+            eredmenyTextBlock.Text = $"Üdvözöllek a WPF világában {nev}!\nTe {eletkor} éves vagy!";
         }
 
     }
