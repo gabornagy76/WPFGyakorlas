@@ -23,6 +23,10 @@
             <!-- Életkor bekérése -->
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            
+            <!-- CheckBox -->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
 
             <!-- Üdvözlés gomb -->
             <RowDefinition Height="Auto"/>
@@ -31,8 +35,8 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- Gomb 4. sor-->
-        <Button Grid.Row="4"
+        <!-- Gomb -->
+        <Button Grid.Row="6"
                 x:Name="udvozlesButton"
                 Width="150"
                 Height="40"
@@ -42,8 +46,8 @@
                 Click="udvozlesButton_Click"
                 IsDefault="True"/>
         
-        <!-- Eredménykiiratás 5. sor-->
-        <TextBlock Grid.Row="5"
+        <!-- Eredménykiiratás -->
+        <TextBlock Grid.Row="7"
                    x:Name="eredmenyTextBlock"
                    FontSize="20"
                    FontWeight="Bold"
@@ -80,6 +84,18 @@
                  FontSize="16"
                  Padding="5"
                  Margin="0,0,0,10"/>
+
+        <CheckBox Grid.Row="4"
+                  x:Name="wpfCheckBox"
+                  Content="Szeretem a WPF-et"
+                  FontSize="16"
+                  Margin="0,0,0,15"/>
+
+        <CheckBox Grid.Row="5"
+                  x:Name="vremekCheckBox"
+                  Content="Készül a vizsgamunka"
+                  FontSize="16"
+                  Margin="0,0,0,15"/>
 
 
     </Grid>

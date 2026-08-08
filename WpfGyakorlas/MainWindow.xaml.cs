@@ -47,7 +47,28 @@ namespace WpfGyakorlas
                 return;
             }
 
-            eredmenyTextBlock.Text = $"Üdvözöllek a WPF világában {nev}!\nTe {eletkor} éves vagy!";
+            string uzenet = $"Üdvözöllek a WPF világában {nev}!\nTe {eletkor} éves vagy!";
+
+            if (wpfCheckBox.IsChecked == true)
+            {
+                uzenet += $"\nÖrülök, hogy kedveled a WPF-et!";
+            }
+            else
+            {
+                uzenet += $"\nSajnálom, hogy nem kedveled a WPF-et!";
+            }
+
+            if (vremekCheckBox.IsChecked == true)
+            {
+                uzenet += $"\nJó hír, hogy haladsz a vizsgremekkel!";
+            }
+            else
+            {
+                uzenet += $"\nDrukkolok, hogy elkészüljön a vizsgremek!";
+            }
+
+
+            eredmenyTextBlock.Text = uzenet;
         }
 
     }
