@@ -40,6 +40,10 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
 
+            <!-- ListBox -->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+
             <!-- Üdvözlés gomb -->
             <RowDefinition Height="Auto"/>
             
@@ -48,7 +52,7 @@
         </Grid.RowDefinitions>
 
         <!-- Gomb -->
-        <Button Grid.Row="11"
+        <Button Grid.Row="13"
                 x:Name="udvozlesButton"
                 Width="150"
                 Height="40"
@@ -59,7 +63,7 @@
                 IsDefault="True"/>
         
         <!-- Eredménykiiratás -->
-        <TextBlock Grid.Row="12"
+        <TextBlock Grid.Row="14"
                    x:Name="eredmenyTextBlock"
                    FontSize="20"
                    FontWeight="Bold"
@@ -174,6 +178,27 @@
 
         </ComboBox>
 
+        <Label Grid.Row="11"
+               Content="_Kedvenc tantárgy"
+               Target="{Binding ElementName=tantargyListBox}"
+               FontSize="18"
+               Margin="0,0,0,5"/>
+
+        <ListBox Grid.Row="12"
+                 x:Name="tantargyListBox"
+                 Height="150"
+                 FontSize="16"
+                 SelectionMode="Single"
+                 SelectedIndex="0"
+                 Margin="0,0,0,15">
+
+            <ListBoxItem Content="Matematika"/>
+            <ListBoxItem Content="Fizika"/>
+            <ListBoxItem Content="Digitális kultúra"/>
+            <ListBoxItem Content="Történelem"/>
+            <ListBoxItem Content="Magyar"/>
+            <ListBoxItem Content="Testnevelés"/>
+        </ListBox>
 
 
     </Grid>
