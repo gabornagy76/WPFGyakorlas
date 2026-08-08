@@ -32,7 +32,11 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
 
-            <!-- Stackpanal - RadioButton -->
+            <!-- Stackpanel - RadioButton -->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+
+            <!-- ComboBox -->
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
 
@@ -44,7 +48,7 @@
         </Grid.RowDefinitions>
 
         <!-- Gomb -->
-        <Button Grid.Row="9"
+        <Button Grid.Row="11"
                 x:Name="udvozlesButton"
                 Width="150"
                 Height="40"
@@ -55,7 +59,7 @@
                 IsDefault="True"/>
         
         <!-- Eredménykiiratás -->
-        <TextBlock Grid.Row="10"
+        <TextBlock Grid.Row="12"
                    x:Name="eredmenyTextBlock"
                    FontSize="20"
                    FontWeight="Bold"
@@ -143,6 +147,34 @@
                          Margin="0,0,0,3"/>
 
         </StackPanel>
+
+        <Label Grid.Row="9"
+               Content="_Osztály"
+               Target="{Binding ElementName=osztalyComboBox}"
+               FontSize="18"
+               Padding="2"
+               Margin="0,0,0,6"/>
+
+        <ComboBox Grid.Row="10"
+                  x:Name="osztalyComboBox"
+                  FontSize="16"
+                  Padding="5"
+                  Margin="0,0,0,15"
+                  SelectedIndex="0">
+
+            <ComboBoxItem Content="9/A"/>
+            <ComboBoxItem Content="9/B"/>
+            <ComboBoxItem Content="9/V"/>
+            <ComboBoxItem Content="10/A"/>
+            <ComboBoxItem Content="10/B"/>
+            <ComboBoxItem Content="10/C"/>
+            <ComboBoxItem Content="11/A"/>
+            <ComboBoxItem Content="11/B"/>
+            <ComboBoxItem Content="11/C"/>
+
+        </ComboBox>
+
+
 
     </Grid>
 </Window>

@@ -21,6 +21,7 @@ namespace WpfGyakorlas
             InitializeComponent();
         }
 
+        // Az Üdvözlés gomb klikk metódusa
         private void udvozlesButton_Click(object sender, RoutedEventArgs e)
         {
             string nev = nevTextBox.Text.Trim();
@@ -77,12 +78,25 @@ namespace WpfGyakorlas
             {
                 nem = "nő";
             }
-
             uzenet += $"\nNemed: {nem}";
 
+
+            // ComboBox - Legördülő lista kiválasztott elemének lekérése.
+            ComboBoxItem kivalasztottelem = (ComboBoxItem)osztalyComboBox.SelectedItem;
+
+            string? osztaly = kivalasztottelem.Content.ToString();
+
+            uzenet += $"\nAz osztályod: {osztaly}";
+
+            // Az eredmény kiiratása
             eredmenyTextBlock.Text = uzenet;
         }
 
+
+
+
+        // CheckBox
+        // Fő CheckBox klikk metódus
         private void foCheckBox_Click(object sender, RoutedEventArgs e)
         {
             bool allapot = foCheckBox.IsChecked == true;
@@ -91,7 +105,7 @@ namespace WpfGyakorlas
             vremekCheckBox.IsChecked= allapot;
         }
 
-
+        // Al-CheckBoxok közös klikk metódusa
         private void alCheckBox_Click(object sender, RoutedEventArgs e)
         {
             if (wpfCheckBox.IsChecked == true && vremekCheckBox.IsChecked == true)
