@@ -11,8 +11,7 @@
         MinHeight="300"
         MinWidth="500"
         MaxHeight="900"
-        MaxWidth="1400"
-        SizeToContent="WidthAndHeight">
+        MaxWidth="1400">
 
     <ScrollViewer VerticalScrollBarVisibility="Auto"
                   HorizontalScrollBarVisibility="Auto">
@@ -47,6 +46,10 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
 
+                <!-- PasswordBox -->
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+
                 <!-- Üdvözlés gomb -->
                 <RowDefinition Height="Auto"/>
 
@@ -55,7 +58,7 @@
             </Grid.RowDefinitions>
 
             <!-- Gomb -->
-            <Button Grid.Row="13"
+            <Button Grid.Row="15"
                 x:Name="udvozlesButton"
                 Width="150"
                 Height="40"
@@ -66,7 +69,7 @@
                 IsDefault="True"/>
 
             <!-- Eredménykiiratás -->
-            <TextBlock Grid.Row="14"
+            <TextBlock Grid.Row="16"
                    x:Name="eredmenyTextBlock"
                    FontSize="20"
                    FontWeight="Bold"
@@ -203,6 +206,19 @@
                 <ListBoxItem Content="Testnevelés"/>
             </ListBox>
 
+
+            <Label Grid.Row="13"
+                   Content="_Jelszó"
+                   Target="{Binding ElementName=jelszoPasswordBox}"
+                   FontSize="18"
+                   Padding="0,0,0,5"
+                   Margin="0,0,0,5"/>
+
+            <PasswordBox Grid.Row="14"
+                         x:Name="jelszoPasswordBox"
+                         FontSize="16"
+                         Padding="5"
+                         Margin="0,0,0,15"/>
 
         </Grid>
 

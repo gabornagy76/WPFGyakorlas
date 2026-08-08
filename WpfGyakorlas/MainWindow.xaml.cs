@@ -96,6 +96,22 @@ namespace WpfGyakorlas
 
             uzenet += $"\nA kedvenc tantárgyad: {tantargy}";
 
+
+            // Jelszókezelés
+            string jelszo = jelszoPasswordBox.Password;
+
+            if (string.IsNullOrWhiteSpace(jelszo))
+            {
+                eredmenyTextBlock.Text = "Adj meg egy jelszót!";
+
+                jelszoPasswordBox.Focus();
+
+                return;
+            }
+
+            uzenet += "\nA jelszót eltároltuk!";
+
+
             // Az eredmény kiiratása
             eredmenyTextBlock.Text = uzenet;
         }
