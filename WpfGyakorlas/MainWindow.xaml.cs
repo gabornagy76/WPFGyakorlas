@@ -88,6 +88,14 @@ namespace WpfGyakorlas
 
             uzenet += $"\nAz osztályod: {osztaly}";
 
+
+            // ListBox - Lista kiválasztott elemének lekérése.
+            ListBoxItem kivalasztottTantargy = (ListBoxItem)tantargyListBox.SelectedItem;
+
+            string? tantargy = kivalasztottTantargy.Content.ToString();
+
+            uzenet += $"\nA kedvenc tantárgyad: {tantargy}";
+
             // Az eredmény kiiratása
             eredmenyTextBlock.Text = uzenet;
         }
