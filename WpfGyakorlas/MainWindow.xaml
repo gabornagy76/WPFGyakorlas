@@ -44,7 +44,8 @@
                 Content="Üdvözlés"
                 FontSize="16"
                 HorizontalAlignment="Left"
-                Click="udvozlesButton_Click"/>
+                Click="udvozlesButton_Click"
+                IsDefault="True"/>
         
         <!-- Eredménykiiratás 3. sor-->
         <TextBlock Grid.Row="3"

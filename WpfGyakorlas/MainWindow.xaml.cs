@@ -20,5 +20,24 @@ namespace WpfGyakorlas
         {
             InitializeComponent();
         }
+
+        private void udvozlesButton_Click(object sender, RoutedEventArgs e)
+        {
+            string nev = nevTextBox.Text.Trim();
+
+            // Ha nem adott meg vagy üres karaktersorozatot adott meg a felhasználó:
+            if (string.IsNullOrEmpty(nev))
+            {
+                eredmenyTextBlock.Text = "A név ne legyen üres!";
+
+                // Visszatesszük a kurzort a beviteli mezőbe
+                nevTextBox.Focus();
+
+                return;
+            }
+
+            eredmenyTextBlock.Text = $"Üdvözöllek a WPF világában {nev}!";
+        }
+
     }
 }
