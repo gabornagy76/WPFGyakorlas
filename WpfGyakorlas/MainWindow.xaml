@@ -11,7 +11,8 @@
         MinHeight="300"
         MinWidth="500"
         MaxHeight="900"
-        MaxWidth="1400">
+        MaxWidth="1400"
+        SizeToContent="WidthAndHeight">
     
     
     <Grid Margin="20">
@@ -31,6 +32,10 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
 
+            <!-- Stackpanal - RadioButton -->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+
             <!-- Üdvözlés gomb -->
             <RowDefinition Height="Auto"/>
             
@@ -39,7 +44,7 @@
         </Grid.RowDefinitions>
 
         <!-- Gomb -->
-        <Button Grid.Row="7"
+        <Button Grid.Row="9"
                 x:Name="udvozlesButton"
                 Width="150"
                 Height="40"
@@ -50,7 +55,7 @@
                 IsDefault="True"/>
         
         <!-- Eredménykiiratás -->
-        <TextBlock Grid.Row="8"
+        <TextBlock Grid.Row="10"
                    x:Name="eredmenyTextBlock"
                    FontSize="20"
                    FontWeight="Bold"
@@ -117,6 +122,27 @@
                   VerticalContentAlignment="Center"
                   Click="alCheckBox_Click"/>
 
+        <Label Grid.Row="7"
+               Content="Nem:"
+               FontSize="18"
+               Padding="5"
+               Margin="0,0,0,5"/>
+
+        <StackPanel Grid.Row="8"
+                    Margin="20,0,0,15">
+
+            <RadioButton x:Name="ferfiRadioButton"
+                             Content="férfi"
+                             IsChecked="True"
+                             GroupName="Nem"
+                             Margin="0,0,0,3"/>
+
+            <RadioButton x:Name="noRadioButton"
+                         Content="nő"
+                         GroupName="Nem"
+                         Margin="0,0,0,3"/>
+
+        </StackPanel>
 
     </Grid>
 </Window>

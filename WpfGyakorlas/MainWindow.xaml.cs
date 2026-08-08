@@ -67,6 +67,18 @@ namespace WpfGyakorlas
                 uzenet += $"\nDrukkolok, hogy elkészüljön a vizsgremek!";
             }
 
+            string nem;
+
+            if (ferfiRadioButton.IsChecked == true)
+            {
+                nem = "férfi";
+            }
+            else
+            {
+                nem = "nő";
+            }
+
+            uzenet += $"\nNemed: {nem}";
 
             eredmenyTextBlock.Text = uzenet;
         }
@@ -95,6 +107,7 @@ namespace WpfGyakorlas
                 foCheckBox.IsChecked = null;
             }
         }
+
 
 
 
