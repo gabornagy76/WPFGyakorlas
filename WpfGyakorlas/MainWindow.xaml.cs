@@ -140,7 +140,6 @@ namespace WpfGyakorlas
 
 
 
-
         // CheckBox
         // Fő CheckBox klikk metódus
         private void foCheckBox_Click(object sender, RoutedEventArgs e)
@@ -165,6 +164,14 @@ namespace WpfGyakorlas
             else
             {
                 foCheckBox.IsChecked = null;
+            }
+        }
+
+        private void kedvSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (kedvProgressBar != null)
+            {
+                kedvProgressBar.Value = e.NewValue;
             }
         }
 
